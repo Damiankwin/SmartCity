@@ -1,0 +1,30 @@
+{
+  "name": "smartcity-traffic-api",
+  "version": "1.0.0",
+  "description": "SmartCity - Gestión de Tráfico Autónomo. API REST (Node.js + Express) auditada y probada con Jest.",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "jest",
+    "test:unit": "jest tests/unit",
+    "test:integration": "jest tests/integration",
+    "test:regression": "jest tests/regression",
+    "test:coverage": "jest --coverage"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "supertest": "^7.0.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "verbose": true,
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "!src/server.js"
+    ],
+    "coverageDirectory": "coverage"
+  }
+}
